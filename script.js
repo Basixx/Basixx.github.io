@@ -4,8 +4,14 @@ $(document).ready(function() {
    const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
    const $tasksContainer = $('[data-tasks-container]');
 
+<<<<<<< HEAD
    var availableBoards = {};
    var availableTasks = {};
+=======
+  var apiRoot = 'https://kodilla-tasks-bsx.herokuapp.com/v1/task/';
+  var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
+  var tasksContainer = $('[data-tasks-container]');
+>>>>>>> 7ae846d557cc4f4e38a31056dbd2e388ec938587
 
    // init
 
@@ -164,6 +170,7 @@ $(document).ready(function() {
       var $listNameSelectEl = $changedSelectEl.siblings('[data-list-name-select]');
       var preparedListOptions = prepareBoardOrListSelectOptions(availableBoards[selectedBoardId].lists);
 
+<<<<<<< HEAD
       $listNameSelectEl.empty().append(preparedListOptions);
    }
 
@@ -206,3 +213,10 @@ $(document).ready(function() {
    $tasksContainer.on('click','[data-task-submit-update-button]', handleTaskUpdateRequest);
    $tasksContainer.on('click','[data-task-delete-button]', handleTaskDeleteRequest);
 });
+=======
+  tasksContainer.on('click','[data-task-edit-button]', toggleEditingState);
+  tasksContainer.on('click','[data-task-edit-abort-button]', toggleEditingState);
+  tasksContainer.on('click','[data-task-submit-update-button]', handleTaskUpdateRequest);
+  tasksContainer.on('click','[data-task-delete-button]', handleTaskDeleteRequest);
+});
+>>>>>>> 7ae846d557cc4f4e38a31056dbd2e388ec938587
